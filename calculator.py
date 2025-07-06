@@ -39,6 +39,7 @@ def float_calc():
         float_calc()
     """ Result displayed """
     print(f"{val1} {op} {val2} = {result}")
+    recursion()
 
 def matrix_calc():
     print("2x2 matrix addition!")
@@ -61,10 +62,20 @@ def matrix_calc():
     else:
         print("Invalid operation provided...")
         matrix_calc()
-
-
-    """Result displayed"""
+        """Result displayed"""
     print(f"The matrix addition of {mat1} and {mat2} is {result}")
+    recursion()
+
+def recursion():
+    ask = str(input("Would you like to use the calculator again? (Y/N): "))
+    if(ask == "Y" or ask == "y"):
+        calculator()
+    elif(ask == "N" or ask == "n"):
+        print("Thank you for using my calculator!")
+    else:
+        print("Invalid input, try again!")
+        recursion()
+
 
 """ Code is called upon """
 calculator()
